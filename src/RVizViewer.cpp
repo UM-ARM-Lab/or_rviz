@@ -39,7 +39,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <QTimer>
 #include <OgreRenderWindow.h>
 #include <OgreHardwarePixelBuffer.h>
-#include <boost/format.hpp>
+// workaround for qt moc bug w.r.t. BOOST_JOIN macro
+// see https://bugreports.qt.io/browse/QTBUG-22829
+#ifndef Q_MOC_RUN
+    #include <boost/format.hpp>
+#endif
 #include <rviz/display_group.h>
 #include <rviz/render_panel.h>
 #include <rviz/visualization_manager.h>

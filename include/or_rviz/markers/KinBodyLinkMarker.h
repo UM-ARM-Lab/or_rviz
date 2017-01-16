@@ -31,7 +31,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *************************************************************************/
 #ifndef KINBODYLINKMARKER_H_
 #define KINBODYLINKMARKER_H_
-#include <interactive_markers/interactive_marker_server.h>
+// workaround for qt moc bug w.r.t. BOOST_JOIN macro
+// see https://bugreports.qt.io/browse/QTBUG-22829
+#ifndef Q_MOC_RUN
+    #include <interactive_markers/interactive_marker_server.h>
+#endif
 #include "LinkMarker.h"
 
 namespace or_rviz {

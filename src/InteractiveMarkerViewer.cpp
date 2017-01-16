@@ -29,10 +29,14 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 *************************************************************************/
-#include <boost/format.hpp>
-#include <boost/make_shared.hpp>
-#include <boost/algorithm/string/trim.hpp>
-#include <interactive_markers/interactive_marker_server.h>
+// workaround for qt moc bug w.r.t. BOOST_JOIN macro
+// see https://bugreports.qt.io/browse/QTBUG-22829
+#ifndef Q_MOC_RUN
+    #include <boost/format.hpp>
+    #include <boost/make_shared.hpp>
+    #include <boost/algorithm/string/trim.hpp>
+    #include <interactive_markers/interactive_marker_server.h>
+#endif
 #include "util/ScopedConnection.h"
 #include "util/ros_conversions.h"
 #include "InteractiveMarkerViewer.h"

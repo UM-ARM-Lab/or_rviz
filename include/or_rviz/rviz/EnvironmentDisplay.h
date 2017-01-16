@@ -33,8 +33,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ENVIRONMENTDISPLAY_H_
 #define ENVIRONMENTDISPLAY_H_
 #include <QObject>
-#include <boost/unordered_map.hpp>
-#include <boost/signals2.hpp>
 #include <rviz/display.h>
 #include <rviz/properties/enum_property.h>
 #include <rviz/properties/tf_frame_property.h>
@@ -42,6 +40,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // see https://bugreports.qt.io/browse/QTBUG-22829
 #ifndef Q_MOC_RUN
     #include <openrave/openrave.h>
+    #include <boost/unordered_map.hpp>
+    #include <boost/signals2.hpp>
 #endif
 
 namespace or_rviz {

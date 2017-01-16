@@ -32,7 +32,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef KINBODYDISPLAY_H_
 #define KINBODYDISPLAY_H_
 
-#include <openrave-core.h>
+#ifndef Q_MOC_RUN
+    #include <openrave-core.h>
+#endif
 
 #include <rviz/display.h>
 #include "KinBodyVisual.h"

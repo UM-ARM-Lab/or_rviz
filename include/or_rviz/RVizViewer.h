@@ -32,11 +32,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *************************************************************************/
 #ifndef ORRVIZ_H_
 #define ORRVIZ_H_
+
 #include <QAction>
 #include <QMenu>
 #include <QTimer>
-#include <rviz/default_plugin/interactive_marker_display.h>
-#include <rviz/visualization_frame.h>
+// workaround for qt moc bug w.r.t. BOOST_JOIN macro
+// see https://bugreports.qt.io/browse/QTBUG-22829
+#ifndef Q_MOC_RUN
+    #include <rviz/default_plugin/interactive_marker_display.h>
+    #include <rviz/visualization_frame.h>
+#endif
 #include "rviz/EnvironmentDisplay.h"
 #include "InteractiveMarkerViewer.h"
 

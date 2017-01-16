@@ -32,17 +32,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef LINKMARKER_H_
 #define LINKMARKER_H_
 #include <vector>
-#include <boost/optional.hpp>
-#include <boost/unordered_map.hpp>
-#include <boost/shared_ptr.hpp>
 // workaround for qt moc bug w.r.t. BOOST_JOIN macro
 // see https://bugreports.qt.io/browse/QTBUG-22829
 #ifndef Q_MOC_RUN
     #include <openrave/openrave.h>
+    #include <boost/optional.hpp>
+    #include <boost/unordered_map.hpp>
+    #include <boost/shared_ptr.hpp>
+    #include <interactive_markers/menu_handler.h>
+    #include <interactive_markers/interactive_marker_server.h>
 #endif
 #include <visualization_msgs/InteractiveMarker.h>
-#include <interactive_markers/menu_handler.h>
-#include <interactive_markers/interactive_marker_server.h>
 
 namespace or_rviz {
 namespace markers {
